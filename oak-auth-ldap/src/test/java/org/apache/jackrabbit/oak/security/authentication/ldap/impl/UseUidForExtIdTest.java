@@ -46,6 +46,8 @@ public class UseUidForExtIdTest extends AbstractLdapIdentityProviderTest {
         ExternalIdentity id = idp.getIdentity(ref);
         assertTrue("User instance", id instanceof ExternalUser);
         assertEquals("User ID", TEST_USER1_UID, id.getId());
+        ref = null;
+        id = null;
     }
 
     @Test
